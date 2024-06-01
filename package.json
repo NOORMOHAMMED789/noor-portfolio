@@ -7,7 +7,6 @@
     "lint": "eslint .",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
-    "prepare": "husky install; chmod ug+x .husky/*",
     "check": "npx prettier --check .",
     "build": "next build",
     "start": "next start"
