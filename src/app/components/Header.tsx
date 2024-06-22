@@ -56,9 +56,9 @@ const Header = () => {
       clearInterval(repeat);
     };
   }, []);
-  const commonClass = "hover:underline px-3 py-2 text-sm font-medium text-white lg:text-[16px]"
+  const commonClass = "hover:underline px-3 py-2 text-sm font-medium text-black lg:text-[16px]"
   return (
-    <nav className="bg-[#1A0B2E]">
+    <nav className="">
       <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-6">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -74,7 +74,7 @@ const Header = () => {
             </button>
           </div>
           <div className="flex flex-1 items-center sm:items-stretch justify-end lg:justify-between">
-            <div className={`px-3 py-2 text-[16px] text-white sm:justify-end`}>
+            <div className={`px-3 py-2 text-[16px] text-black font-normal sm:justify-end`}>
               <div className='font-orbitron uppercase flex justify-center items-center gap-3 text-[12px] md:text-[14px] lg:text-[16px]'>
                 {display.map((char, i) => (
                   <span key={i}>{char}</span>
@@ -82,7 +82,7 @@ const Header = () => {
               </div>
             </div>
             <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 text-black">
                 <a href="/aboutme" className={`${commonClass}`} aria-current="page">About Me</a>
                 <a href="/projects" className={`${commonClass}`} aria-current='page'>My Projects</a>
                 <a href="/resume" className={`${commonClass}`} aria-current='page'>Resume Download</a>
@@ -102,11 +102,11 @@ const Header = () => {
         id="mobile-menu"
       >
         <div onClick={() => setShowMenu(false)} className='text-white flex justify-end px-5 py-5 hover:cursor-pointer'>close</div>
-        <div className="space-y-1 px-4 pt-5 pb-3">
-          <a href="/aboutme" className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">About Me</a>
-          <a href="/myprojects" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">My Projects</a>
-          <a href="/resume" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Resume Download</a>
-          <a href="/contact" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Me</a>
+        <div className="space-y-1 px-4 pt-5 pb-3 text-black">
+          <a href="/aboutme" className="block rounded-md text-black px-3 py-2 text-base font-medium">About Me</a>
+          <a href="/myprojects" className="block rounded-md px-3 py-2 text-base font-medium  hover:bg-gray-700 hover:text-white">My Projects</a>
+          <a href="/resume" className="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white">Resume Download</a>
+          <a href="/contact" className="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white">Contact Me</a>
         </div>
       </div>
     </nav>
