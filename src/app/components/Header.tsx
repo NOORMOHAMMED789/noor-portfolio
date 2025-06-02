@@ -74,7 +74,7 @@ const Header = () => {
     <>
       <div>
         <button 
-        onClick={() => setShowMenu(!showMenu)} type="button" className="lg:hidden md:hidden relative inline-flex items-center justify-center text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
+        onClick={() => setShowMenu(!showMenu)} type="button" className="lg:hidden md:hidden relative inline-flex items-center justify-center text-gray-400 hover:text-white p-7" aria-controls="mobile-menu" aria-expanded="false">
           <GiHamburgerMenu size={20} />
         </button>
 
@@ -85,14 +85,13 @@ const Header = () => {
             ))}
           </div>
 
-          <nav className='list-none flex gap-4'>
+          {!showMenu && <nav className='list-none flex gap-4'>
             {navLinks.map((nav, idx) => {
               return <li key={`${nav.title}_${idx}`}>
                 <a href={nav.href} className={`stroke-link lg:text-[1.6rem] md:text-[1.4rem] hover:text-white no-underline transition-all duration-300`}>{nav.title || "Missing"}</a>
               </li>
             })}
-            
-          </nav>
+          </nav>}
         </div>
       </div>
 
@@ -109,13 +108,13 @@ const Header = () => {
         >
           <IoMdClose size={25} color='#000' />
         </button>
-        <nav className="space-y-1 px-4 pt-5 pb-3 text-black list-none">
+       {showMenu && <nav className="space-y-1 px-4 pt-7 pb-3 text-black list-none">
           {navLinks.map((nav, idx) => {
             return <li key={`${nav.title}_${idx}`}>
-              <a href={nav.href} className={`stroke-link list-none hover:text-white no-underline transition-all duration-300`}>{nav.title || "Missing"}</a>
+              <a href={nav.href} className={`stroke-link lg:text-[1.6rem] md:text-[1.4rem] text-[1.4rem]  list-none hover:text-white no-underline transition-all duration-300`}>{nav.title || "Missing"}</a>
             </li>
           })}
-        </nav>
+        </nav>}
       </div>
       <style>{`
         .stroke-link {
