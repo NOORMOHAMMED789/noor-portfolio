@@ -1,12 +1,15 @@
+import React from "react";
 
-const Education: React.FC = () => {
- 
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+}
 
+const Card: React.FC<CardProps> = ({ children, className, ...rest }) => {
   return (
-    <section className="">
-      <div>Education details</div>
-    </section>
+    <div className={`rounded-xl shadow p-4 ${className || ""}`} {...rest}>
+      {children}
+    </div>
   );
 };
 
-export default Education;
+export default Card;
