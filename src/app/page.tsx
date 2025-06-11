@@ -1,4 +1,5 @@
 import Aboutme from "./components/Aboutme";
+import Contactme from "./components/Contactme";
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 import MyProjects from "./components/MyProjects";
@@ -12,6 +13,7 @@ export default function Home() {
       <Homepage name={name} />
       <Aboutme name={name} />
       <MyProjects name={name} />
+      <Contactme name={name} />
     </div>
   );
 }
