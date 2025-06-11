@@ -1,4 +1,5 @@
 'use client';
+// import Image from 'next/image';
 import React from 'react';
 
 interface HeaderProps {
@@ -11,18 +12,21 @@ const Header: React.FC<HeaderProps> = ({ NavbarItems }) => {
 
 
   return (
-    <nav className='mx-20 my-4 flex justify-end items-end gap-4 hover:cursor-pointer'>
-      <ul className='flex gap-4'>
-        {NavbarItems.map((nav, index) => (
-          <li
-            key={`${nav}_${index}`}
-            className={`${commonClasses}`}
-          >
-            {nav}
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div className='flex justify-end items-end my-10'>
+      {/* <Image className='bg-transparent' src="/noor_logo.png" width={250} height={250} alt='noor-mohammed-logo' /> */}
+      <nav className='hover:cursor-pointer'>
+        <ul className='flex justify-end items-end flex-row gap-4'>
+          {NavbarItems.map((nav, index) => (
+            <li
+              key={`${nav}_${index}`}
+              className={`${commonClasses}`}
+            >
+              {nav}
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 };
 
