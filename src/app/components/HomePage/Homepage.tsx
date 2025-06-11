@@ -8,7 +8,7 @@ interface HomepageProps {
 
 const Homepage: React.FC<HomepageProps> = ({ name }) => {
     return (
-        <div>
+        <div className="text-lg-3xl break-words ">
             {name}
         </div>
     )

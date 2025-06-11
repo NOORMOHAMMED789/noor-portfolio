@@ -1,5 +1,4 @@
 'use client';
-// import Image from 'next/image';
 import React from 'react';
 
 interface HeaderProps {
@@ -13,7 +12,6 @@ const Header: React.FC<HeaderProps> = ({ NavbarItems }) => {
 
   return (
     <div className='flex justify-end items-end my-10'>
-      {/* <Image className='bg-transparent' src="/noor_logo.png" width={250} height={250} alt='noor-mohammed-logo' /> */}
       <nav className='hover:cursor-pointer'>
         <ul className='flex justify-end items-end flex-row gap-4'>
           {NavbarItems.map((nav, index) => (
