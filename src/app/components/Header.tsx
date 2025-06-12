@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ NavbarItems }) => {
 
 
   return (
-    <div className='flex justify-between items-center bg-[#C6E2FF] p-3 md:p-4 lg:p-6'>
+    <div className='w-full flex flex-wrap justify-between items-center bg-[#C6E2FF] p-3 md:p-4 lg:p-6'>
       <div className='container'>
         <div className='text'>
           <span>N</span>
