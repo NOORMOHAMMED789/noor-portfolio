@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ NavbarItems }) => {
 
   return (
     <div className='flex justify-between items-center bg-slate-400 p-3 md:p-4 lg:p-6'>
-      <span>NOOR MOHAMMED</span>
+      <span className='text-sm md:text-lg lg:text-2xl'>NOOR MOHAMMED</span>
       <nav className='hover:cursor-pointer hidden md:block lg:block'>
         <ul className='flex justify-end items-end flex-row gap-4'>
           {NavbarItems.map((nav, index) => (
