@@ -8,7 +8,7 @@ import { name } from "./constants/Ulity";
 
 export default function Home() {
   return (
-    <div className="mx-[5rem] my-[1rem]">
+    <div>
       <Header NavbarItems={NavbarItems} />
       <Homepage name={name} />
       <Aboutme name={name} />
