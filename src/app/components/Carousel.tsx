@@ -21,7 +21,16 @@ const Carousel: React.FC<CarouselProps> = ({ name }) => {
                 <div className="carousel-cell"><a>📱 Mobile-First Design: Free Ebook Download</a></div>
                 {name}
             </div>
-            <style>{``}</style>
+            <style>{`
+                .annoucement-bar-carousel {
+
+                
+                }
+                .carousel-cell {
+                    
+                }
+            
+            `}</style>
         </div>
     )
 }
