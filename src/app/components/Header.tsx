@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({ NavbarItems }) => {
         
         .text {
           font-size: clamp(1rem, 1vw, 1rem);
-          letter-spacing: 7px;
+          letter-spacing: 6px;
           color: #000;
         }
       
