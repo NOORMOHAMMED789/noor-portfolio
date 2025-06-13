@@ -23,12 +23,15 @@ const Carousel: React.FC<CarouselProps> = ({ name }) => {
             </div>
             <style>{`
                 .annoucement-bar-carousel {
-
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
                 
                 }
                 .carousel-cell {
-                    
+
                 }
+
             
             `}</style>
         </div>
