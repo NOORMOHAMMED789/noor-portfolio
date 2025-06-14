@@ -29,7 +29,8 @@ const Carousel: React.FC<CarouselProps> = ({ name }) => {
                 
                 }
                 .carousel-cell {
-                    
+                    width: 100%;
+                    height: 100%;
                 }
 
             
