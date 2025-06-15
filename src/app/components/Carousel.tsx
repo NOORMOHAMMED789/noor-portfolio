@@ -4,12 +4,13 @@ import React from "react"
 
 
 interface CarouselProps {
-    name: string
+    name: string,
+    brand: string
 }
 
 
 //Building a carousel
-const Carousel: React.FC<CarouselProps> = ({ name }) => {
+const Carousel: React.FC<CarouselProps> = ({ name, brand }) => {
     return (
         <div>
             <div className="annoucement-bar-carousel">
@@ -20,6 +21,7 @@ const Carousel: React.FC<CarouselProps> = ({ name }) => {
                 <div className="carousel-cell"><a>📱 Mobile-First Design: Free Ebook Download</a></div>
             </div>
             {name}
+            {brand}
         </div>
     )
 }
