@@ -19,6 +19,7 @@ const Carousel: React.FC<CarouselProps> = ({ name }) => {
                 <div className="carousel-cell"><a>✨ VS Code Tip: Try the New AI Copilot X</a></div>
                 <div className="carousel-cell"><a>📱 Mobile-First Design: Free Ebook Download</a></div>
             </div>
+            {name}
         </div>
     )
 }
