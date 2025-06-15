@@ -9,7 +9,6 @@ interface CarouselProps {
 
 
 //Building a carousel
-
 const Carousel: React.FC<CarouselProps> = ({ name }) => {
     return (
         <div>
@@ -19,22 +18,7 @@ const Carousel: React.FC<CarouselProps> = ({ name }) => {
                 <div className="carousel-cell"><a>🔗 CSS Grid Workshop: Master Layouts in 2 Hours</a></div>
                 <div className="carousel-cell"><a>✨ VS Code Tip: Try the New AI Copilot X</a></div>
                 <div className="carousel-cell"><a>📱 Mobile-First Design: Free Ebook Download</a></div>
-                {name}
             </div>
-            <style>{`
-                .annoucement-bar-carousel {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                
-                }
-                .carousel-cell {
-                    width: 100%;
-                    height: 100%;
-                }
-
-            
-            `}</style>
         </div>
     )
 }
