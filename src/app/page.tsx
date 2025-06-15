@@ -5,12 +5,12 @@ import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 // import MyProjects from "./components/MyProjects";
 import { NavbarItems } from './constants/Navbar'
-import { name } from "./constants/Ulity";
+import { brand, name } from "./constants/Ulity";
 
 export default function Home() {
   return (
     <div>
-      <Carousel name={name} />
+      <Carousel name={name} brand={brand}/>
       <Header NavbarItems={NavbarItems} />
       <Homepage name={name} />
       {/* <Aboutme name={name} /> */}
