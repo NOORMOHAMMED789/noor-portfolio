@@ -7,7 +7,7 @@ interface HomepageProps {
   name: string;
 }
 
-const Homepage: React.FC<HomepageProps> = ({ }) => {
+const Homepage: React.FC<HomepageProps> = ({ name }) => {
   return (
     <div className="relative w-full" style={{ height: 'calc(100vh - 72px)' }}>
       <Image
@@ -18,16 +18,15 @@ const Homepage: React.FC<HomepageProps> = ({ }) => {
         priority
       />
       <div className="container">
-        {/* <div className="wrapper absolute inset-0 flex items-center justify-center bg-black/40">
+        <div className="wrapper absolute inset-0 flex items-center justify-center bg-black/40">
           <h1 className="intro text-white text-3xl sm:text-5xl md:text-6xl font-bold text-center px-4">
             <div className="greeting">{name}
               <span className="dynamic-text" id='dynamic-text'></span>
             </div>
           </h1>
-        </div> */}
+        </div>
       </div>
       <style>{`
-      
         .wrapper {
           width: 80%;
           padding: 30px 20px;
@@ -54,7 +53,6 @@ const Homepage: React.FC<HomepageProps> = ({ }) => {
           font-size: 1.25rem;
           color: #ccc;
         }
-          
         .dynamic-text {
           font-weight: 600;
           color: #e06c75;
