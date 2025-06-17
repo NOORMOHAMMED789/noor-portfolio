@@ -1,6 +1,6 @@
 'use client';
 
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 interface HomepageProps {
@@ -9,7 +9,7 @@ interface HomepageProps {
 
 const Homepage: React.FC<HomepageProps> = ({  }) => {
 
-  const words = ["Full Stack Developer", "Frontend Developer", "Backend Developer", "Mechanical Engineer"];
+  const words = ["Full Stack Developer.", "Frontend Developer.", "Backend Developer.", "Mechanical Engineer too :)."];
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [letterIndex, setLetterIndex] = useState(0);
@@ -43,21 +43,22 @@ const Homepage: React.FC<HomepageProps> = ({  }) => {
 
     return () => clearTimeout(timer);
   }, [letterIndex, isDeleting, wordIndex]);
+
   return (
     <div className="relative w-full" style={{ height: 'calc(100vh - 72px)' }}>
-      <Image
+      {/* <Image
         src="http://ppcdn.500px.org/75319705/1991f76c0c6a91ae1d23eb94ac5c7a9f7e79c480/2048.jpg"
         alt="homepage-bg"
         fill
         className="object-cover"
         priority
-      />
+      /> */}
       <div>
         <div className="absolute inset-0 flex items-center justify-center bg-black/40">
           <h1 className="text-white text-3xl sm:text-5xl md:text-6xl font-bold text-center px-4">
             <div className="intro">
-              <span>Hello, My Name is Noor Mohammed. Im a </span>
-              <span className="greeting">{text}</span>
+              <span className="text-sm md:text-lg lg:text-2xl">Hello, My Name is Noor Mohammed. Im a </span>
+              <span className="text-lg md:text-2xl lg:text-3xl">{text}</span>
             </div>
           </h1>
         </div>
