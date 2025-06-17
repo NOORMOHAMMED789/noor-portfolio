@@ -1,13 +1,48 @@
 'use client';
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface HomepageProps {
   name: string;
 }
 
-const Homepage: React.FC<HomepageProps> = ({ name }) => {
+const Homepage: React.FC<HomepageProps> = ({  }) => {
+
+  const words = ["Full Stack Developer", "Frontend Developer", "Backend Developer", "Mechanical Engineer"];
+  const [text, setText] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [letterIndex, setLetterIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const typingSpeed = 120;
+  const deletingSpeed = 60;
+  const pauseBetweenWords = 1500;
+
+  useEffect(() => {
+    const currentWord = words[wordIndex];
+
+    let timer:ReturnType<typeof setTimeout>;
+
+    if (!isDeleting) {
+      if (letterIndex <= currentWord.length) {
+        setText(currentWord.slice(0, letterIndex));
+        timer = setTimeout(() => setLetterIndex(letterIndex + 1), typingSpeed);
+      } else {
+        timer = setTimeout(() => setIsDeleting(true), pauseBetweenWords);
+      }
+    } else {
+      if (letterIndex > 0) {
+        setText(currentWord.slice(0, letterIndex));
+        timer = setTimeout(() => setLetterIndex(letterIndex - 1), deletingSpeed);
+      } else {
+        setIsDeleting(false);
+        setWordIndex((wordIndex + 1) % words.length);
+      }
+    }
+
+    return () => clearTimeout(timer);
+  }, [letterIndex, isDeleting, wordIndex]);
   return (
     <div className="relative w-full" style={{ height: 'calc(100vh - 72px)' }}>
       <Image
@@ -20,7 +55,9 @@ const Homepage: React.FC<HomepageProps> = ({ name }) => {
       <div>
         <div className="absolute inset-0 flex items-center justify-center bg-black/40">
           <h1 className="text-white text-3xl sm:text-5xl md:text-6xl font-bold text-center px-4">
-            <div>{name}
+            <div className="intro">
+              <span>Hello, My Name is Noor Mohammed. Im a </span>
+              <span className="greeting">{text}</span>
             </div>
           </h1>
         </div>
