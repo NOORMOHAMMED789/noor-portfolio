@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from "react";
-
+import styles from "./hompage.module.css"
 
 const Homepage: React.FC = () => {
 
@@ -42,24 +42,24 @@ const Homepage: React.FC = () => {
   return (
     <div className="relative w-full" style={{ height: 'calc(100vh - 72px)' }}>
       <header>
-        <section className="slider">
+        <section className={styles.slider}>
           <ul>
             <li>
-              <article className="center-y padding_2x">
+              <article className={`${styles['center-y']} ${styles.padding_2x}`}              >
                 <h3 className="big title"><em>O</em>ccupational <em>H</em>ealth</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                 <a href="#about" className="btn btn_3">More about us</a>
               </article>
             </li>
             <li>
-              <article className="center-y padding_2x">
+              <article className={`${styles['center-y']} ${styles.padding_2x}`}              >
                 <h3 className="big title"><em>Fire Fighting</em> Spill Response.</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 <a href="#" className="btn btn_3">View Issues</a>
               </article>
             </li>
             <li>
-              <article className="center-y padding_2x">
+              <article className={`${styles['center-y']} ${styles.padding_2x}`}              >
                 <h3 className="big title"><em>Fire Fighting</em> Spill Response.</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 <a href="#" className="btn btn_3">View Issues</a>
