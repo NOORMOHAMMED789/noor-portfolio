@@ -51,6 +51,25 @@ const Homepage: React.FC = () => {
                 <a href="#about" className="btn btn_3">More about us</a>
               </article>
             </li>
+            <li>
+              <article className="center-y padding_2x">
+                <h3 className="big title"><em>Fire Fighting</em> Spill Response.</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <a href="#" className="btn btn_3">View Issues</a>
+              </article>
+            </li>
+            <li>
+              <article className="center-y padding_2x">
+                <h3 className="big title"><em>Fire Fighting</em> Spill Response.</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <a href="#" className="btn btn_3">View Issues</a>
+              </article>
+            </li>
+            <aside>
+              <a href="#"></a>
+              <a href="#"></a>
+              <a href="#"></a>
+            </aside>
           </ul>
         </section>
       </header>
