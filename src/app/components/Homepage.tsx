@@ -18,7 +18,7 @@ const Homepage: React.FC = () => {
   useEffect(() => {
     const currentWord = words[wordIndex];
 
-    let timer:ReturnType<typeof setTimeout>;
+    let timer: ReturnType<typeof setTimeout>;
 
     if (!isDeleting) {
       if (letterIndex <= currentWord.length) {
@@ -34,13 +34,26 @@ const Homepage: React.FC = () => {
       setIsDeleting(false);
       setWordIndex((wordIndex + 1) % words.length);
     }
-    
+
 
     return () => clearTimeout(timer);
   }, [letterIndex, isDeleting, wordIndex]);
 
   return (
     <div className="relative w-full" style={{ height: 'calc(100vh - 72px)' }}>
+      <header>
+        <section className="slider">
+          <ul>
+            <li>
+              <article className="center-y padding_2x">
+                <h3 className="big title"><em>O</em>ccupational <em>H</em>ealth</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <a href="#about" className="btn btn_3">More about us</a>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </header>
       <div>
         <div className="absolute inset-0 flex items-center justify-center bg-black/40">
           <h1 className="text-white text-3xl sm:text-5xl md:text-6xl font-bold text-center px-4">
