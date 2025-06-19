@@ -57,7 +57,7 @@ const Homepage: React.FC = () => {
               <article className="center-y padding_2x">
                 <h3 className="big title"><em>Fire Fighting</em> Spill Response.</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <a href="#" className="btn btn_3">View Issues</a>
+                <a href="/home" className="btn btn_3">View Issues</a>
               </article>
             </li>
             <li>
