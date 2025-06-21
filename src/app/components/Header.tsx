@@ -23,11 +23,10 @@ const Header = () => {
               </svg>
             </button>
           </div>
-          <div className="flex flex-1 items-end justify-end sm:items-stretch sm:justify-end">
-
+          <div className="flex flex-1 items-center sm:items-stretch justify-end lg:justify-between">
+            <div className={`px-3 py-2 text-[16px] text-white sm:justify-end`}>Noor Mohammed</div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-
                 <a href="/aboutme" className={`${commonClass}`} aria-current="page">About Me</a>
                 <a href="/projects" className={`${commonClass}`} aria-current='page'>My Projects</a>
                 <a href="/resume" className={`${commonClass}`} aria-current='page'>Resume Download</a>
