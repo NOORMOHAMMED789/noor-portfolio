@@ -3,7 +3,8 @@ import React from 'react';
 
 
 
-const Header = ({  }) => {
+const Header = () => {
+  const commonClass = "hover:underline px-3 py-2 text-sm font-medium text-white lg:text-[16px]"
   return (
     <nav className="bg-gray-800">
       <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-6">
@@ -36,10 +37,10 @@ const Header = ({  }) => {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                <a href="/aboutme" className="hover:underline px-3 py-2 text-sm font-medium text-white lg:text-[16px]" aria-current="page">About Me</a>
-                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">My Projects</a>
-                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Resume Download</a>
-                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Me</a>
+                <a href="/aboutme" className={`${commonClass}`} aria-current="page">About Me</a>
+                <a href="/projects" className={`${commonClass}`}>My Projects</a>
+                <a href="/resume" className={`${commonClass}`}>Resume Download</a>
+                <a href="/contactme" className={`${commonClass}`}>Contact Me</a>
               </div>
             </div>
           </div>
