@@ -56,7 +56,7 @@ const Header = () => {
       clearInterval(repeat);
     };
   }, []);
-  const commonClass = "hover:underline px-3 py-2 text-sm font-medium text-black lg:text-[16px]"
+  const commonClass = "hover:underline px-3 py-2 text-sm font-medium text-black lg:text-[16px] inline-block"
   return (
     <nav className="">
       <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-6">
