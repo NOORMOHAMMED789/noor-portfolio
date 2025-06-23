@@ -83,7 +83,7 @@ const Header = () => {
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4 text-black">
-                <a href="/aboutme" className={`${commonClass} decoration-none uppercase `} aria-current="page">About Me</a>
+                <a href="/aboutme" className={`${commonClass} `} aria-current="page">About Me</a>
                 <a href="/projects" className={`${commonClass}`} aria-current='page'>My Projects</a>
                 <a href="/resume" className={`${commonClass}`} aria-current='page'>Resume Download</a>
                 <a href="/contactme" className={`${commonClass}`} aria-current='page'>Contact Me</a>
