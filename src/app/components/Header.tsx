@@ -24,7 +24,23 @@ const Header = () => {
             </button>
           </div>
           <div className="flex flex-1 items-center sm:items-stretch justify-end lg:justify-between">
-            <div className={`px-3 py-2 text-[16px] text-white sm:justify-end`}>Noor Mohammed</div>
+            <div className={`px-3 py-2 text-[16px] text-white sm:justify-end`}>
+              <div className='font-[Orbitron] uppercase'>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span className='ml-2'></span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+              </div>
+            </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 <a href="/aboutme" className={`${commonClass}`} aria-current="page">About Me</a>
