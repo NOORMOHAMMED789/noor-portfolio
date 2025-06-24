@@ -25,7 +25,7 @@ const Header = () => {
           </div>
           <div className="flex flex-1 items-center sm:items-stretch justify-end lg:justify-between">
             <div className={`px-3 py-2 text-[16px] text-white sm:justify-end`}>
-              <div className='font-[Orbitron] uppercase'>
+              <div className='font-orbitron uppercase'>
                 <span>0</span>
                 <span>0</span>
                 <span>0</span>
