@@ -94,9 +94,16 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="translate-x-8" id="mobile-menu">
-        <div className="space-y-1 px-2 pt-2 pb-3">
-          <a href="/aboutme" className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">About Me</a>
+      <div
+          className={`fixed top-0 left-0 w-64 h-full bg-gray-800 z-50
+            transition-all duration-500 ease-in-out
+            transform ${showMenu ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 pointer-events-none'}
+          `}
+        id="mobile-menu"
+      >
+        <div onClick={() => setShowMenu(false)} className='text-white flex justify-end px-5 py-5 hover:cursor-pointer'>close</div>
+        <div className="space-y-1 px-4 pt-5 pb-3">
+          <a href="/aboutme" className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">About Me</a>
           <a href="/myprojects" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">My Projects</a>
           <a href="/resume" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Resume Download</a>
           <a href="/contact" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Me</a>
