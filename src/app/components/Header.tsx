@@ -1,9 +1,9 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 
-const letters = ['p', 'a', 't', 't', 'e', 'r', 'n'];
-const TIMER = 30; // ms per frame
-const CYCLE = 15000; // 30 seconds
+const letters = ['N','O','O','R',' ','M','O','H','A','M','M','E','D'];
+const TIMER = 60; 
+const CYCLE = 15000;
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -75,7 +75,7 @@ const Header = () => {
           </div>
           <div className="flex flex-1 items-center sm:items-stretch justify-end lg:justify-between">
             <div className={`px-3 py-2 text-[16px] text-white sm:justify-end`}>
-              <div className='font-orbitron uppercase flex justify-center items-center gap-3'>
+              <div className='font-orbitron uppercase flex justify-center items-center gap-3 text-[12px] md:text-[14px] lg:text-[16px]'>
                 {display.map((char, i) => (
                   <span key={i}>{char}</span>
                 ))}
