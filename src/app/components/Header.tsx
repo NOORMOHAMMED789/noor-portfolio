@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const letters = ['N','O','O','R',' ','M','O','H','A','M','M','E','D'];
-const TIMER = 60; 
+const TIMER = 30; 
 const CYCLE = 15000;
 
 const Header = () => {
