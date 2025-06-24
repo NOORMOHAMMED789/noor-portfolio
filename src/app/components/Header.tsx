@@ -1,11 +1,61 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-
+const letters = ['p', 'a', 't', 't', 'e', 'r', 'n'];
+const TIMER = 30; // ms per frame
+const CYCLE = 15000; // 30 seconds
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
+  const [display, setDisplay] = useState(Array(letters.length).fill('0'));
+  const changes = useRef<number[]>([]);
+  const counters = useRef<number[]>([]);
+  const animationRef = useRef<NodeJS.Timeout | null>(null);
 
+  const startAnimation = () => {
+    changes.current = letters.map(() => Math.floor(Math.random() * 100));
+    counters.current = Array(letters.length).fill(0);
+
+    if (animationRef.current) clearInterval(animationRef.current);
+
+    animationRef.current = setInterval(() => {
+      setDisplay((prev) => {
+        const updated = [...prev];
+        let allDone = true;
+
+        for (let i = 0; i < updated.length; i++) {
+          if (counters.current[i] <= changes.current[i]) {
+            updated[i] = Math.floor(Math.random() * 10).toString();
+            counters.current[i]++;
+            allDone = false;
+          } else {
+            updated[i] = letters[i];
+          }
+        }
+
+        // Stop animation once all letters have completed
+        if (allDone && animationRef.current) {
+          clearInterval(animationRef.current);
+          animationRef.current = null;
+        }
+
+        return updated;
+      });
+    }, TIMER);
+  };
+
+  useEffect(() => {
+    startAnimation(); // initial run
+
+    const repeat = setInterval(() => {
+      startAnimation(); // every 30 seconds
+    }, CYCLE);
+
+    return () => {
+      if (animationRef.current) clearInterval(animationRef.current);
+      clearInterval(repeat);
+    };
+  }, []);
   const commonClass = "hover:underline px-3 py-2 text-sm font-medium text-white lg:text-[16px]"
   return (
     <nav className="bg-gray-800">
@@ -25,20 +75,10 @@ const Header = () => {
           </div>
           <div className="flex flex-1 items-center sm:items-stretch justify-end lg:justify-between">
             <div className={`px-3 py-2 text-[16px] text-white sm:justify-end`}>
-              <div className='font-orbitron uppercase'>
-                <span>0</span>
-                <span>0</span>
-                <span>0</span>
-                <span>0</span>
-                <span className='ml-2'></span>
-                <span>0</span>
-                <span>0</span>
-                <span>0</span>
-                <span>0</span>
-                <span>0</span>
-                <span>0</span>
-                <span>0</span>
-                <span>0</span>
+              <div className='font-orbitron uppercase flex justify-center items-center gap-3'>
+                {display.map((char, i) => (
+                  <span key={i}>{char}</span>
+                ))}
               </div>
             </div>
             <div className="hidden sm:ml-6 sm:block">
