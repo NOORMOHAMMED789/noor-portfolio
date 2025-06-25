@@ -22,6 +22,7 @@
   --gray:rgba(1,1,1,0.6);
   --dark:#3c3d3c;
   --primary:linear-gradient(145deg,#ff2f09,#c24a4e);
+  --primary-background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
   --primary_dark:#970104;
   --primary_lite:#c24a4e;
   --secondary:#000a17;
@@ -49,6 +50,12 @@
   --foreground: #171717;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--primary-background);
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

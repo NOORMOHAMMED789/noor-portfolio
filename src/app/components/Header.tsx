@@ -58,7 +58,7 @@ const Header = () => {
   }, []);
   const commonClass = "hover:underline px-3 py-2 text-sm font-medium text-white lg:text-[16px]"
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-[#1A0B2E]">
       <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-6">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
