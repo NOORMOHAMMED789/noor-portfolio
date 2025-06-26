@@ -1,15 +1,24 @@
 import React from "react";
+import Card from "./Card";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-}
+type EducationProps = React.ComponentProps<typeof Card>;
 
-const Card: React.FC<CardProps> = ({ children, className, ...rest }) => {
+const Education: React.FC<EducationProps> = (props) => {
   return (
-    <div className={`rounded-xl shadow p-4 ${className || ""}`} {...rest}>
-      {children}
+    <div className="flex flex-wrap">
+      <h2>Education details</h2>
+      <Card {...props}>
+        <div>Education details</div>
+      </Card>
+      <Card {...props}>
+        <div>Education details</div>
+      </Card>
+      <Card {...props}>
+        <div>Education details</div>
+      </Card>
+
     </div>
   );
 };
 
-export default Card;
+export default Education;

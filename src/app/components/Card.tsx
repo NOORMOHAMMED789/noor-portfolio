@@ -1,12 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const Card = () => {
-  return (
-    <div className='p-4 border-b-2'>
-      Card details are
-    </div>
-  )
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
 }
 
-export default Card
+const Card: React.FC<CardProps> = ({ children, className, ...rest }) => {
+  return (
+    <div className={`rounded-xl shadow w-[300px] h-[300px] border-b ${className || ""}`} {...rest}>
+      {children}
+    </div>
+  );
+};
 
+export default Card;

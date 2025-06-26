@@ -62,14 +62,6 @@ const Header = () => {
     };
   }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (showMenu) {
-        setShowMenu(!showMenu)
-      }
-    }, 10000)
-  }, [showMenu])
-
   return (
     <>
       <div>
