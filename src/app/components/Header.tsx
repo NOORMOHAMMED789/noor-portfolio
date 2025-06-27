@@ -88,7 +88,7 @@ const Header = () => {
       </div>
 
       <div
-        className={`fixed top-0 left-0 w-64 h-full bg-white opacity-70 z-50
+        className={`fixed top-0 left-0 w-[75%] h-full bg-white opacity-90 z-50
             transition-all duration-500 ease-in-out
             transform ${showMenu ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 pointer-events-none'}
           `}
@@ -103,7 +103,7 @@ const Header = () => {
        {showMenu && <nav className="space-y-1 px-4 pt-7 pb-3 text-black list-none">
           {navLinks.map((nav, idx) => {
             return <li key={`${nav.title}_${idx}`}>
-              <a href={nav.href} className={`stroke-link lg:text-[1.6rem] md:text-[1.4rem] text-[1.4rem]  list-none hover:text-white no-underline transition-all duration-300`}>{nav.title || "Missing"}</a>
+              <a href={nav.href} className={`stroke-link lg:text-[1.6rem] md:text-[1.4rem] text-[2.4rem]  list-none hover:text-white no-underline transition-all duration-300`}>{nav.title || "Missing"}</a>
             </li>
           })}
         </nav>}
