@@ -53,7 +53,8 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding-left: 40px;
+  padding-right: 40px;
   box-sizing: border-box;
   background: var(--primary-background);
   
@@ -104,5 +105,13 @@ nav.stroke ul li a:hover:after {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+
+@media (min-width: 900px) and (max-width: 1440px) {
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

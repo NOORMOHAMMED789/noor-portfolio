@@ -49,10 +49,10 @@ const Header = () => {
   };
 
   useEffect(() => {
-    startAnimation(); // initial run
+    startAnimation();
 
     const repeat = setInterval(() => {
-      startAnimation(); // every 30 seconds
+      startAnimation();
     }, CYCLE);
 
     return () => {
@@ -70,16 +70,16 @@ const Header = () => {
   },[showMenu])
   return (
     <div>
-      <nav className="">
-        <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-6">
+      <nav>
+        <div>
           <div className="relative flex h-16 items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-              <button onClick={() => setShowMenu(!showMenu)} type="button" className="relative inline-flex items-center justify-center p-2 text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
-                <GiHamburgerMenu />
+              <button onClick={() => setShowMenu(!showMenu)} type="button" className="relative inline-flex items-center justify-center text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
+                <GiHamburgerMenu size={20} />
               </button>
             </div>
-            <div className="flex flex-1 items-center sm:items-stretch justify-end lg:justify-between">
-              <div className={`px-3 py-2 text-[16px] text-black font-normal sm:justify-end`}>
+            <div className="flex flex-1 items-center sm:items-stretch justify-end md:justify-between lg:justify-between">
+              <div className={`text-[16px] text-black font-normal sm:justify-end`}>
                 <div className='font-orbitron uppercase flex justify-center items-center gap-3 text-[12px] md:text-[14px] lg:text-[16px]'>
                   {display.map((char, i) => (
                     <span key={i}>{char}</span>
