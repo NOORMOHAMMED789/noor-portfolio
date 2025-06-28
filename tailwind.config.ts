@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         orbitron: ['Orbitron', 'sans-serif'],
+        Preahvihear: ['Preahvihear', 'sans-serif']
       },
     },
   },
