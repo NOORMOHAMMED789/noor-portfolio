@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-type EducationProps = React.ComponentProps<typeof Card>;
+type EducationProps = Omit<React.ComponentProps<typeof Card>, "children">;
 
 const Education: React.FC<EducationProps> = (props) => {
   return (
