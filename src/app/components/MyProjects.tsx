@@ -1,25 +1,25 @@
 import React from "react";
 import Card from "./Card";
 
-type EducationProps = Omit<React.ComponentProps<typeof Card>, "children">;
+type MyProjectProps = Omit<React.ComponentProps<typeof Card>, "children">;
 
-const Education: React.FC<EducationProps> = (props) => {
+const MyProjects: React.FC<MyProjectProps> = (props) => {
   return (
     <>
-      <h2>Education details</h2>
+      <h2>My Projects details</h2>
       <section className="flex flex-wrap lg:justify-between lg:items-center lg:gap-10">
       <Card {...props} className='grow lg:grow'>
-        <div>Education details</div>
+        <div>My Projects details</div>
       </Card>
       <Card {...props} className="grow lg:grow">
-        <div>Education details</div>
+        <div>My Projects details</div>
       </Card>
       <Card {...props} className="grow lg:grow">
-        <div>Education details</div>
+        <div>My Projects details</div>
       </Card>
       </section>
     </>
   );
 };
 
-export default Education;
+export default MyProjects;

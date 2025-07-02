@@ -1,6 +1,6 @@
-import Education from "./components/Education";
 import Header from "./components/Header";
 import HomePage from "./components/HomePage";
+import MyProjects from "./components/MyProjects";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <Header />
       <div className="homepage"> 
         <HomePage />
-        <Education />
+        <MyProjects />
       </div>
     </>
   );
