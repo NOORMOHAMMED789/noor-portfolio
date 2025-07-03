@@ -1,4 +1,5 @@
 import React from "react";
+import { educationData } from "../constants/Ulity";
 
 type TimelineItem = {
   id: number;
@@ -13,7 +14,7 @@ interface EducationTimelineProps {
 }
 
 const EducationTimeline: React.FC<EducationTimelineProps> = ({ items = [] }) => {
-  if (items.length === 0) return null; 
+  if (items.length === 0) items = educationData; 
 
   return (
     <div className="relative border-l border-gray-300 pl-6">
