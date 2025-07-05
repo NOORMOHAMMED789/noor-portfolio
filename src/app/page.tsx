@@ -1,3 +1,4 @@
+import ContactForm from "./components/ContactForm";
 import EducationTimeline from "./components/EducationTimeline";
 import Header from "./components/Header";
 import HomePage from "./components/HomePage";
@@ -13,6 +14,7 @@ export default function Home() {
         <MyProjects />
         <EducationTimeline />
         <MyCertifications />
+        <ContactForm />
       </div>
     </>
   );
