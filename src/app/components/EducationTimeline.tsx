@@ -18,7 +18,7 @@ const EducationTimeline: React.FC<EducationTimelineProps> = ({ items = [] }) => 
 
   return (
     <>
-      <h2>Education TimeLine</h2>
+      <h2 className="title">Education TimeLine</h2>
       <div className="relative border-l-0 py-6">
         <div className="relative mx-auto w-full max-w-3xl">
           <div className="absolute left-1/2 top-0 h-full w-1 bg-gray-300 transform -translate-x-1/2" />

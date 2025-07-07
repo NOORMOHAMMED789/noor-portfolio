@@ -62,6 +62,9 @@ body {
   @apply text-[2.4rem] underline
 }
 
+.title {
+  @apply lg:text-[2.4rem] md:text-[1.8rem] sm:text-[1.4rem] font-Preahvihear
+}
 
 nav ul {
   list-style: none;

@@ -3,7 +3,7 @@ const HomePage: React.FC = () => {
     return (
         <div className="lg:mb-[4.8rem] md:mb-[3rem] mb-[2.4rem]">
             <header>
-                <h1 className="homepage_title">Hello. Im Noor Mohammed</h1>
+                <h1 className="title">Hello. Im Noor Mohammed</h1>
                 <p className="homepage_tag">Software Developer</p>
             </header>
             <section className="homepage_desc">
