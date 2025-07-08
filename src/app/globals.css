@@ -47,11 +47,11 @@ body {
 }
 
 .homepage_tag {
-  @apply text-[3rem]
+  @apply lg:text-[2.4rem] md:text-[1.6rem] text-[1.4rem] font-orbitron
 }
 
 .homepage_desc {
-  @apply text-[2.4rem]
+  @apply lg:text-[2.4rem] md:text-[1.6rem] text-[1.2rem] font-sans
 }
 
 .education_title {
