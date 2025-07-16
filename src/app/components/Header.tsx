@@ -68,6 +68,7 @@ const Header = () => {
       }
     },10000)
   },[showMenu])
+
   return (
     <div>
       <nav>
@@ -79,8 +80,8 @@ const Header = () => {
               </button>
             </div>
             <div className="flex flex-1 items-center sm:items-stretch justify-end md:justify-between lg:justify-between">
-              <div className={` text-[1.6rem] text-black font-normal sm:justify-end`}>
-                <div className='font-orbitron uppercase flex justify-center items-center gap-3 text-[12px] md:text-[14px] lg:text-[1.6rem]'>
+              <div className={`text-[1.6rem] text-black font-normal sm:justify-end`}>
+                <div className='font-orbitron uppercase flex justify-center items-center gap-3 text-[1.2rem] md:text-[14px] lg:text-[1.6rem]'>
                   {display.map((char, i) => (
                     <span key={`${char}_${i}`}>{char}</span>
                   ))}
