@@ -79,10 +79,10 @@ const Header = () => {
               </button>
             </div>
             <div className="flex flex-1 items-center sm:items-stretch justify-end md:justify-between lg:justify-between">
-              <div className={`text-[16px] text-black font-normal sm:justify-end`}>
-                <div className='font-orbitron uppercase flex justify-center items-center gap-3 text-[12px] md:text-[14px] lg:text-[16px]'>
+              <div className={` text-[1.6rem] text-black font-normal sm:justify-end`}>
+                <div className='font-orbitron uppercase flex justify-center items-center gap-3 text-[12px] md:text-[14px] lg:text-[1.6rem]'>
                   {display.map((char, i) => (
-                    <span key={i}>{char}</span>
+                    <span key={`${char}_${i}`}>{char}</span>
                   ))}
                 </div>
               </div>
@@ -106,7 +106,10 @@ const Header = () => {
           `}
           id="mobile-menu"
         >
-          <div onClick={() => setShowMenu(false)} className='text-white flex justify-end px-5 py-5 hover:cursor-pointer'>
+          <div 
+            onClick={() => setShowMenu(false)} 
+            className='text-white flex justify-end px-5 py-5 hover:cursor-pointer'
+          >
             <IoMdClose size={25} color='#000'/>
           </div> 
           <div className="space-y-1 px-4 pt-5 pb-3 text-black">
