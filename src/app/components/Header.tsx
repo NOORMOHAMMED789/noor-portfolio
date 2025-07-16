@@ -73,23 +73,23 @@ const Header = () => {
     <div>
       <nav>
         <div>
-          <div className="relative flex h-16 items-center justify-between">
-            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <div className="">
+            <div className="lg:hidden">
               <button onClick={() => setShowMenu(!showMenu)} type="button" className="relative inline-flex items-center justify-center text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
                 <GiHamburgerMenu size={20} />
               </button>
             </div>
 
-            <div className="flex flex-1 items-center sm:items-stretch justify-end md:justify-between lg:justify-between">
-              <div className={`text-[1.6rem] text-black font-normal sm:justify-end`}>
-                <div className='font-orbitron uppercase flex justify-center items-center gap-3 text-[1.2rem] md:text-[14px] lg:text-[1.6rem]'>
+            <div className="">
+              <div className={``}>
+                <div className='logo'>
                   {display.map((char, i) => (
                     <span key={`${char}_${i}`}>{char}</span>
                   ))}
                 </div>
               </div>
               
-              <div className="hidden sm:ml-6 sm:block">
+              <div className="  ">
                 <div className="flex space-x-9 text-black">
                   <a href="/aboutme" className={`stroke-link hover:text-white transition-all duration-300`}>About Me</a>
                   <a href="/projects" className="stroke-link  hover:text-white transition-all duration-300">My Projects</a>
