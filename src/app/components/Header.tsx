@@ -86,6 +86,7 @@ const Header = () => {
                   ))}
                 </div>
               </div>
+              
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-9 text-black">
                   <a href="/aboutme" className={`stroke-link hover:text-white transition-all duration-300`}>About Me</a>
