@@ -79,19 +79,21 @@ const Header = () => {
           </button>
         </div>
 
-        <div className='logo'>
-          {display.map((char, i) => (
-            <span key={`${char}_${i}`}>{char}</span>
-          ))}
-        </div>
+        <div>
+          <div className='logo'>
+            {display.map((char, i) => (
+              <span key={`${char}_${i}`}>{char}</span>
+            ))}
+          </div>
 
-        <nav className='list-none flex gap-4'>
-          {navLinks.map((nav, idx) => {
-            return <li key={`${nav.title}_${idx}`}>
-              <a href={nav.href} className={`stroke-link hover:text-white no-underline transition-all duration-300`}>{nav.title || "Missing"}</a>
-            </li>
-          })}
-        </nav>
+          <nav className='list-none flex gap-4'>
+            {navLinks.map((nav, idx) => {
+              return <li key={`${nav.title}_${idx}`}>
+                <a href={nav.href} className={`stroke-link hover:text-white no-underline transition-all duration-300`}>{nav.title || "Missing"}</a>
+              </li>
+            })}
+          </nav>
+        </div>
       </div>
 
       <div
