@@ -77,7 +77,6 @@ const Header = () => {
           <button onClick={() => setShowMenu(!showMenu)} type="button" className="relative inline-flex items-center justify-center text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
             <GiHamburgerMenu size={20} />
           </button>
-          
         </div>
 
         <div>
