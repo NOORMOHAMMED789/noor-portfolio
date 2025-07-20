@@ -15,6 +15,7 @@
 
 :root{
   --white:#FFF;
+  --bg: rgba(106, 137, 167, 0.5);
   --black:#232323;
   --lite:rgba(255,255,255,0.6);
   --gray:rgba(1,1,1,0.6);
@@ -29,12 +30,16 @@
   --title_font:'Outfit', sans-serif;
 }
 
+body {
+  background-color: var(--bg);
+}
+
 .logo {
   @apply font-orbitron flex gap-3 uppercase text-[1.6rem] leading-[1.2rem] md:text-[1.8rem] md:leading-[1.4rem] lg:text-[2.4rem] lg:leading-[2rem];
 }
 
 .lg-flex {
-  @apply lg:flex lg:justify-between lg:items-center
+  @apply lg:flex lg:justify-between lg:items-center bg-white/40  py-[1.6rem] px-[2.4rem] p-4 rounded-md backdrop-filter backdrop-blur-lg bg-opacity-40 shadow-xl
 }
 
 

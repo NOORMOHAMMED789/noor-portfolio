@@ -74,12 +74,11 @@ const Header = () => {
     <>
       <div>
         <button 
-        
         onClick={() => setShowMenu(!showMenu)} type="button" className="lg:hidden relative inline-flex items-center justify-center text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
           <GiHamburgerMenu size={20} />
         </button>
 
-        <div className='lg-flex '>
+        <div className='lg-flex'>
           <div className='logo'>
             {display.map((char, i) => (
               <span key={`${char}_${i}`}>{char}</span>
