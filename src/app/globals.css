@@ -30,7 +30,11 @@
 }
 
 .logo {
-  @apply font-orbitron uppercase text-[1.6rem] leading-[1.2rem] md:text-[1.8rem] md:leading-[1.4rem] lg:text-[2.4rem] lg:leading-[2rem];
+  @apply font-orbitron flex gap-3 uppercase text-[1.6rem] leading-[1.2rem] md:text-[1.8rem] md:leading-[1.4rem] lg:text-[2.4rem] lg:leading-[2rem];
+}
+
+.lg-flex {
+  @apply lg:flex lg:justify-between lg:items-center
 }
 
 
