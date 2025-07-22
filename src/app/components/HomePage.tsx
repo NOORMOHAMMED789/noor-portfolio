@@ -1,25 +1,12 @@
-import Image from 'next/image';
-import React from 'react';
 
-
-const HomePage = () => {
+const HomePage: React.FC = () => {
     return (
-        <div className='relative'>
-            <div className='relative'>
-                <div>
-                    <Image src='/image.png'  width={300} height={300} alt='logo-bg' />
-                </div>
-                <div className='absolute top-[15%] left-[2%]'>
-                    <Image src="/image copy.png" width={250} height={250} alt='logo' />
-                </div>
-            </div>
-            <div className='absolute -top-9  left-52'>
-                <Image src='/arrow.svg' width={100} height={100} alt='arrow' />
-            </div>
-            <div className='absolute -top-8 left-72'>
-                <span className='font-Preahvihear'>Hello! I Am </span>
-                <span className='font-Preahvihear text-[#7127BA]'>Noor Mohammed</span>
-            </div>
+        <div className="">
+            <strong className="text-[2.4rem] font-Preahvihear">Hello. Im Noor Mohammed</strong>
+            <blockquote className="text-[1.6rem]">Software developer</blockquote>
+            <span className="text-[1.6rem]">
+            As a Associate Member of Technical Staff at Aprecomm, with a bachelor of technology in Mechanical Engineering from Madanapalle Institute of Technology & Science, I bring a unique perspective to the tech industry. I am passionate about learning new technologies and improving my coding skills.I am always eager to take on new challenges and collaborate with diverse teams.
+            </span>
         </div>
     )
 }
