@@ -58,6 +58,10 @@ body {
   @apply text-[2.4rem]
 }
 
+.education_title {
+  @apply text-[2.4rem] underline
+}
+
 nav ul {
   list-style: none;
   text-align: center;
