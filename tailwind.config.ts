@@ -16,6 +16,8 @@ export default {
         orbitron: ['Orbitron', 'sans-serif'],
         Preahvihear: ['Preahvihear', 'sans-serif']
       },
+      fontSize: {
+      }
     },
   },
   plugins: [],
