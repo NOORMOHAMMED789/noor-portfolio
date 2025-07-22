@@ -91,6 +91,7 @@ const Header = () => {
                 <a href={nav.href} className={`stroke-link lg:text-[1.6rem] md:text-[1.4rem] hover:text-white no-underline transition-all duration-300`}>{nav.title || "Missing"}</a>
               </li>
             })}
+            
           </nav>
         </div>
       </div>
