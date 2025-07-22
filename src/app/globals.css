@@ -35,11 +35,11 @@ body {
 }
 
 .logo {
-  @apply font-orbitron flex gap-3 uppercase text-[1.6rem] leading-[1.2rem] md:text-[1.8rem] md:leading-[1.4rem] lg:text-[2.4rem] lg:leading-[2rem];
+  @apply font-orbitron flex gap-3 uppercase text-[1.6rem] leading-[1.2rem] md:text-[1.8rem] md:leading-[1.4rem] lg:text-[2.4rem] lg:leading-[2rem] font-medium;
 }
 
 .lg-flex {
-  @apply lg:flex lg:justify-between lg:items-center bg-white/40  py-[1.6rem] px-[2.4rem] p-4 rounded-md backdrop-filter backdrop-blur-lg bg-opacity-40 shadow-xl
+  @apply lg:flex lg:justify-between lg:items-center bg-white/40  lg:py-[1.6rem] lg:px-[2.4rem] md:py-[1rem] md:px-[1.4rem] rounded-md backdrop-filter backdrop-blur-lg bg-opacity-40 shadow-xl md:flex md:justify-between md:items-center hidden
 }
 
 

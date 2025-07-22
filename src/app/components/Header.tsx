@@ -74,7 +74,7 @@ const Header = () => {
     <>
       <div>
         <button 
-        onClick={() => setShowMenu(!showMenu)} type="button" className="lg:hidden relative inline-flex items-center justify-center text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
+        onClick={() => setShowMenu(!showMenu)} type="button" className="lg:hidden md:hidden relative inline-flex items-center justify-center text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
           <GiHamburgerMenu size={20} />
         </button>
 
@@ -88,7 +88,7 @@ const Header = () => {
           <nav className='list-none flex gap-4'>
             {navLinks.map((nav, idx) => {
               return <li key={`${nav.title}_${idx}`}>
-                <a href={nav.href} className={`stroke-link lg:text-[1.6rem] hover:text-white no-underline transition-all duration-300`}>{nav.title || "Missing"}</a>
+                <a href={nav.href} className={`stroke-link lg:text-[1.6rem] md:text-[1.4rem] hover:text-white no-underline transition-all duration-300`}>{nav.title || "Missing"}</a>
               </li>
             })}
           </nav>
