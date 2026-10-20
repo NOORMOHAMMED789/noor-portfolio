@@ -1,7 +1,8 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
 
 const skills = [
   "Node.js",
@@ -11,6 +12,8 @@ const skills = [
   "PostgreSQL",
   "MongoDB",
   "Redis",
+  "SQL",
+  "REST APIs",
   "Docker",
   "GraphQL",
   "Git",
@@ -63,6 +66,45 @@ export default function Home() {
     document.documentElement.dataset.theme = initialTheme;
   }, []);
 
+
+const pageRef = useRef<HTMLElement>(null);
+
+useEffect(() => {
+  const root = pageRef.current;
+  if (!root) return;
+
+  const elements = root.querySelectorAll(
+    ".about-section, .skills-section, .projects-section, .contact-section"
+  );
+
+  const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (media.matches || !("IntersectionObserver" in window)) {
+    return;
+  }
+
+  elements.forEach((element) => {
+    element.classList.add("reveal-on-scroll");
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  elements.forEach((element) => observer.observe(element));
+
+  return () => observer.disconnect();
+}, []);
+
+
   function toggleTheme() {
     const nextTheme = theme === "light" ? "dark" : "light";
 
@@ -111,11 +153,14 @@ export default function Home() {
             systems for the <span>real world.</span>
           </h1>
 
+
           <p className="hero-description">
-            I&apos;m a backend developer focused on building robust APIs,
-            scalable services and practical software solutions with Node.js
-            and TypeScript.
+            I&apos;m a backend engineer specializing in Node.js and TypeScript,
+            building reliable APIs, database-driven applications and
+            maintainable backend services. I enjoy solving engineering
+            problems and designing systems that scale.
           </p>
+
 
           <div className="hero-actions">
             <a className="button button-primary" href="#projects">

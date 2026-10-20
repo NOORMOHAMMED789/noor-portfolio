@@ -765,3 +765,336 @@ a:focus-visible {
     animation-duration: 0.01ms !important;
   }
 }
+
+
+/* ===== Subtle portfolio animations ===== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes accentPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgb(13 148 136 / 0%);
+  }
+  50% {
+    box-shadow: 0 0 24px 2px rgb(13 148 136 / 10%);
+  }
+}
+
+/* Intro animation */
+.hero-content {
+  animation: fadeUp 650ms ease-out both;
+}
+
+.hero-visual {
+  animation: fadeUp 800ms ease-out both;
+}
+
+.availability {
+  animation: fadeUp 500ms ease-out both;
+}
+
+/* Floating developer illustration */
+.code-card {
+  animation: softFloat 5s ease-in-out infinite;
+}
+
+/* Smooth interactive elements */
+.button,
+.theme-toggle,
+.skill-card,
+.project-card {
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.button-primary {
+  box-shadow: 0 5px 16px rgb(13 148 136 / 12%);
+}
+
+.button-primary:hover {
+  box-shadow: 0 9px 25px rgb(13 148 136 / 22%);
+}
+
+.skill-card:hover {
+  box-shadow: var(--shadow);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Gentle accent on the code illustration */
+.code-card:hover {
+  border-color: var(--accent);
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .hero-visual,
+  .availability,
+  .code-card {
+    animation: none !important;
+  }
+}
+
+
+/* ========================================
+   Premium portfolio motion
+======================================== */
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes revealRight {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 18px rgb(13 148 136 / 8%);
+  }
+  50% {
+    box-shadow: 0 0 40px rgb(13 148 136 / 22%);
+  }
+}
+
+@keyframes orbitRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-12px) rotate(0deg); }
+}
+
+@keyframes gradientFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes statusGlow {
+  0%, 100% { box-shadow: 0 0 0 3px rgb(16 185 129 / 10%); }
+  50% { box-shadow: 0 0 0 7px rgb(16 185 129 / 4%); }
+}
+
+/* Hero entrance sequence */
+.hero-content > * {
+  animation: revealUp 650ms cubic-bezier(.2,.7,.2,1) both;
+}
+
+.hero-content > *:nth-child(1) { animation-delay: 80ms; }
+.hero-content > *:nth-child(2) { animation-delay: 180ms; }
+.hero-content > *:nth-child(3) { animation-delay: 280ms; }
+.hero-content > *:nth-child(4) { animation-delay: 380ms; }
+.hero-content > *:nth-child(5) { animation-delay: 480ms; }
+.hero-content > *:nth-child(6) { animation-delay: 580ms; }
+
+.hero-visual {
+  animation: revealRight 850ms cubic-bezier(.2,.7,.2,1) both;
+}
+
+.status-dot {
+  animation: statusGlow 2.5s ease-in-out infinite;
+}
+
+/* Animated headline accent */
+.hero h1 span {
+  background: linear-gradient(
+    110deg,
+    var(--accent),
+    #38bdf8,
+    var(--accent),
+    #a78bfa
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientFlow 7s ease infinite;
+}
+
+/* Floating illustration */
+.code-card {
+  animation: drift 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.orbit-one {
+  animation: orbitRotate 32s linear infinite;
+  border-top-color: var(--accent);
+}
+
+.orbit-two {
+  animation: orbitRotate 24s linear infinite reverse;
+  border-bottom-color: var(--accent);
+}
+
+.floating-badge {
+  animation: drift 4s ease-in-out infinite;
+}
+
+.badge-bottom {
+  animation-delay: -2s;
+}
+
+/* Scroll reveal: activated by JavaScript below */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered project cards */
+.projects-grid .project-card:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.projects-grid .project-card:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+/* More expressive hover interactions */
+.skill-card,
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before,
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transform: scaleX(0);
+  transition: transform 350ms ease;
+}
+
+.skill-card:hover::before,
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.015);
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+}
+
+.project-symbol,
+.skill-arrow {
+  transition: transform 250ms ease;
+}
+
+.project-card:hover .project-symbol,
+.skill-card:hover .skill-arrow {
+  transform: translate(3px, -3px);
+}
+
+.button-primary {
+  background-size: 200% 100%;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    background-color 220ms ease;
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+}
+
