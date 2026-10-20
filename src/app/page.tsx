@@ -26,7 +26,7 @@ const projects = [
     description:
       "A modular backend platform with REST APIs, PostgreSQL, Prisma, Docker, automated tests and a foundation for scalable services.",
     stack: ["Node.js", "TypeScript", "PostgreSQL", "Docker"],
-    link: "https://github.com/",
+    link: "https://github.com/NOORMOHAMMED789/e-commerce",
   },
   {
     number: "02",
@@ -34,7 +34,7 @@ const projects = [
     description:
       "A backend API for creating, completing and paginating tasks, with structured routes and automated testing.",
     stack: ["Node.js", "Express.js", "TypeScript", "Vitest"],
-    link: "https://github.com/",
+    link: "https://github.com/NOORMOHAMMED789/e-commerce",
   },
   {
     number: "03",
@@ -42,7 +42,7 @@ const projects = [
     description:
       "Backend engineering for device management, API integrations and network provisioning workflows.",
     stack: ["Node.js", "TypeScript", "MongoDB", "PostgreSQL"],
-    link: "https://github.com/",
+    link: "https://github.com/NOORMOHAMMED789/e-commerce",
   },
 ];
 
@@ -173,14 +173,14 @@ useEffect(() => {
 
           <div className="social-links">
             <a
-              href="https://github.com/"
+              href="https://github.com/NOORMOHAMMED789"
               target="_blank"
               rel="noreferrer"
             >
               GitHub ↗
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/noor-mohammed-dev"
               target="_blank"
               rel="noreferrer"
             >
@@ -219,7 +219,7 @@ useEffect(() => {
             </div>
           </div>
           <div className="floating-badge badge-top">{"{ }"} TypeScript</div>
-          <div className="floating-badge badge-bottom">⚡ Node.js</div>
+          <div className="floating-badge badge-bottom">Node.js</div>
         </div>
 
         <a className="scroll-hint" href="#about">
@@ -328,7 +328,6 @@ useEffect(() => {
         <a className="brand" href="#home">
           Noor<span>.</span>
         </a>
-        <p>Designed and built with Next.js · TypeScript</p>
         <a href="#home">Back to top ↑</a>
       </footer>
     </main>
