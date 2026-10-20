@@ -142,7 +142,7 @@ export default function Home() {
         <div className="hero-content">
           <div className="availability">
             <span className="status-dot" />
-            Software Engineer · Open to opportunities · Immediate Joiner
+            Software Engineer · Open to opportunities
           </div>
 
           <p className="eyebrow">HELLO, I'M NOOR MOHAMMED</p>
@@ -204,11 +204,12 @@ export default function Home() {
             <div className="code-content">
               <p><span className="code-purple">const</span> developer = {"{"}</p>
               <p className="indent">name: <span className="code-green">&quot;Noor&quot;</span>,</p>
+              <p className="indent">experience: <span className="code-green">&quot;4 years&quot;</span>,</p>
               <p className="indent">
-                role: <span className="code-green">&quot;Backend Engineer&quot;</span>,
+                role: <span className="code-green">&quot;Full stack developer&quot;</span>,
               </p>
               <p className="indent">
-                builds: <span className="code-green">&quot;Scalable APIs&quot;</span>,
+                builds: <span className="code-green">&quot;Scalable APIs&quot;</span>, {" "}<span className="code-green">&quot;Reliable Systems&quot;</span>,
               </p>
               <p className="indent">
                 stack: [<span className="code-green">&quot;Node.js&quot;</span>,{" "}
@@ -322,6 +323,7 @@ export default function Home() {
             className="button button-primary"
             href="https://drive.google.com/file/d/1jnbWwdFrbIO3E_LupV5_CTOyn9jQxs8z/view?usp=sharing"
             download="Noor-Mohammed-Resume.pdf"
+            target="_blank"
           >
             Download Resume <span>↓</span>
           </a>
