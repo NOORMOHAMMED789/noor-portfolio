@@ -142,7 +142,7 @@ useEffect(() => {
         <div className="hero-content">
           <div className="availability">
             <span className="status-dot" />
-            Software Engineer · Open to opportunities
+            Software Engineer · Open to opportunities · Immediate Joiner
           </div>
 
           <p className="eyebrow">HELLO, I'M NOOR MOHAMMED</p>
@@ -322,6 +322,7 @@ useEffect(() => {
         >
           Get in touch <span>↗</span>
         </a>
+        <a> Call me: +91-8919279010</a>
       </section>
 
       <footer className="footer">
