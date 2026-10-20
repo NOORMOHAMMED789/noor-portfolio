@@ -67,42 +67,42 @@ export default function Home() {
   }, []);
 
 
-const pageRef = useRef<HTMLElement>(null);
+  const pageRef = useRef<HTMLElement>(null);
 
-useEffect(() => {
-  const root = pageRef.current;
-  if (!root) return;
+  useEffect(() => {
+    const root = pageRef.current;
+    if (!root) return;
 
-  const elements = root.querySelectorAll(
-    ".about-section, .skills-section, .projects-section, .contact-section"
-  );
+    const elements = root.querySelectorAll(
+      ".about-section, .skills-section, .projects-section, .contact-section"
+    );
 
-  const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  if (media.matches || !("IntersectionObserver" in window)) {
-    return;
-  }
+    if (media.matches || !("IntersectionObserver" in window)) {
+      return;
+    }
 
-  elements.forEach((element) => {
-    element.classList.add("reveal-on-scroll");
-  });
+    elements.forEach((element) => {
+      element.classList.add("reveal-on-scroll");
+    });
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
 
-  elements.forEach((element) => observer.observe(element));
+    elements.forEach((element) => observer.observe(element));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
 
   function toggleTheme() {
@@ -309,6 +309,26 @@ useEffect(() => {
         </div>
       </section>
 
+      <section className="resume-section section" id="resume">
+        <div className="resume-content">
+          <p className="eyebrow">MY RESUME</p>
+          <h2>Let's talk about what I can bring to your team.</h2>
+          <p>
+            Explore my experience, technical skills, and backend engineering
+            projects in my resume.
+          </p>
+
+          <a
+            className="button button-primary"
+            href="https://drive.google.com/file/d/1jnbWwdFrbIO3E_LupV5_CTOyn9jQxs8z/view?usp=sharing"
+            download="Noor-Mohammed-Resume.pdf"
+          >
+            Download Resume <span>↓</span>
+          </a>
+        </div>
+      </section>
+
+
       <section className="section contact-section" id="contact">
         <p className="eyebrow">HAVE A PROJECT IN MIND?</p>
         <h2>Let&apos;s build something great.</h2>
@@ -318,18 +338,42 @@ useEffect(() => {
         </p>
         <a
           className="button button-primary"
-          href="mailto:your-email@example.com"
+          href="mailto:noormohammedknr2@gmail.com"
         >
           Get in touch <span>↗</span>
         </a>
-        <a> Call me: +91-8919279010</a>
       </section>
 
-      <footer className="footer">
-        <a className="brand" href="#home">
-          Noor<span>.</span>
-        </a>
-        <a href="#home">Back to top ↑</a>
+      <footer className="site-footer">
+        <div className="footer-main">
+          <div className="footer-intro">
+            <a href="#home" className="brand">
+              Noor<span>.</span>
+            </a>
+            <p>Building reliable backend systems and meaningful software.</p>
+          </div>
+
+          <div className="footer-contact">
+            <h3>Get in touch</h3>
+
+            <a href="mailto:noormohammedknr2@gmail.com">
+              <span>Email</span>
+              noormohammedknr2@gmail.com
+            </a>
+
+            <a href="tel:+918919279010">
+              <span>Phone</span>
+              +91 8919279010
+            </a>
+          </div>
+
+          <div className="footer-navigation">
+            <h3>Explore</h3>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+          </div>
+        </div>
       </footer>
     </main>
   );
