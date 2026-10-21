@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Noor Mohammed | Backend Developer",
+  title: "Noor Mohammed | Full stack developer",
   description:
-    "Portfolio of Noor Mohammed, a backend developer specializing in Node.js, TypeScript, APIs, databases and scalable software systems.",
+    "Portfolio of Noor Mohammed, a full stack developer specializing in React.js, Next.js, CSS, Node.js, TypeScript, APIs, databases and scalable software systems.",
   openGraph: {
     title: "Noor Mohammed | Backend Developer",
     description:
